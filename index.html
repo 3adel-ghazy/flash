@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash - Q&A Website</title>
+    <link rel="stylesheet" href="adel.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p id="error-message" class="hidden">Incorrect username or password!</p>
+        <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+    </div>
+
+    <div id="register-container" class="hidden">
+        <h2>Create an Account</h2>
+        <input type="text" id="new-username" placeholder="Choose a Username">
+        <input type="password" id="new-password" placeholder="Choose a Password">
+        <button onclick="register()">Register</button>
+        <p id="register-error" class="hidden">Username already exists!</p>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+    
+    <div id="main-container" class="hidden">
+        <h1>Welcome to Flash, <span id="display-username"></span>!</h1>
+        <textarea id="question" placeholder="Write your question here..."></textarea>
+        <button onclick="getAnswer()">Get Answer</button>
+        <p id="answer"></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="adel.js"></script>
+</body>
+</html>
